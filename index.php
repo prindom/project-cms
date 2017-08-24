@@ -1,5 +1,11 @@
-<?php include 'assets/php/cms.php';
+<?php
+  include 'assets/php/cms.php';
+  include 'assets/php/content.php';
   $CMS = new CMS;
+  $Content = new Content;
+  if(!isset($_GET["page_id"])){
+    $_GET["page_id"] = 1;
+  }
 ?>
 <!DOCTYPE html>
 <html lang="de">
@@ -16,7 +22,8 @@
     <!-- php load body-->
 
     <?php $CMS->getHeader(); ?>
-    <?php $CMS->getContent($_GET["page_id"]); ?>
+    <?php $Content->getContent($_GET["page_id"]); ?>
+    <!-- <?php $Content->form();?> -->
     <?php $CMS->getFooter(); ?>
 
     <!-- php laod scripts-->

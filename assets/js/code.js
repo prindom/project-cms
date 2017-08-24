@@ -1,5 +1,8 @@
 $(document).ready(function (event) {
   console.log(event);
+  tinymce.init({
+    selector: '.richedit'
+  });
   let i = 0;
   let time = "";
   let sec = 0, min = 0, hours = 0;
