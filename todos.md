@@ -1,0 +1,3 @@
+- php laod scripts __TODO__ [assets\php\page.php](assets\php\page.php)
+- php load body __TODO__ [assets\php\page.php](assets\php\page.php)
+- php load stylesheets __TODO__ [assets\php\page.php](assets\php\page.php)
