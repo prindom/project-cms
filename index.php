@@ -20,7 +20,6 @@
   </head>
   <body>
     <!-- php load body-->
-
     <?php $CMS->getHeader(); ?>
     <?php $Content->getContent($_GET["page_id"]); ?>
     <!-- <?php $Content->form();?> -->
@@ -28,9 +27,5 @@
 
     <!-- php laod scripts-->
     <?php $CMS->getScripts(); ?>
-
-
-
-
   </body>
 </html>

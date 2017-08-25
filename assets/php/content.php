@@ -14,7 +14,8 @@ class Content
         'user_id' => '',
         'page_id' => '',
         'name' => '',
-        'special' => ''
+        'special' => '',
+        'active' => ''
     );
 
   public $id;
@@ -24,6 +25,7 @@ class Content
   public $page_id;
   public $name;
   public $special;
+  public $active;
 
   function __construct()
   {
@@ -39,6 +41,9 @@ class Content
                     `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
                     `user_id` int(11) NOT NULL,
                     `page_id` int(11) NOT NULL,
+                    `name` varchar(64) NOT NULL,
+                    `special` int(11) NOT NULL,
+                    `active` int(11) NOT NULL,
                     PRIMARY KEY (`id`)
                 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;";
 
@@ -99,7 +104,7 @@ class Content
             // echo "Connected successfully \n";
           }
 
-          $sql = "SELECT `html` FROM `content` WHERE page_id=$page_id AND special=0";
+          $sql = "SELECT `html` FROM `content` WHERE page_id=$page_id AND special=0 AND active=1";
           $res = mysqli_query($mysql, $sql);
           $mysql->close();
           while($row = $res->fetch_assoc()) {
