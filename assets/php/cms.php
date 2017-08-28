@@ -49,6 +49,19 @@ class CMS {
       }
     }
 
+    public static function setHeader($html) {
+      $mysql = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
+      if (!$mysql) {
+          die("Connection failed: " . mysqli_connect_error());
+      } else {
+        // echo "Connected successfully \n";
+      }
+
+      $sql = "UPDATE `content` SET `html`=$html WHERE name='header' AND special=1";
+      $res = mysqli_query($mysql, $sql);
+      $mysql->close();
+    }
+
     public static function getHeader() {
         $mysql = new mysqli(SERVER, USERNAME, PASSWORD, DATABASE);
         if (!$mysql) {
