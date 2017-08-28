@@ -53,25 +53,6 @@ class Content
   }
 
   public function form() {
-    // echo '<form action="assets/php/post.php" method="post">
-    //         <div class="form-group">
-    //           <label for="name">Name:</label>
-    //           <input type="text" class="form-control" id="name">
-    //         </div>
-    //         <div class="form-group">
-    //           <label for="page_id">Page:</label>
-    //           <input type="text" class="form-control" id="page_id">
-    //         </div>
-    //         <div class="form-group">
-    //           <label for="html">HTML:</label>
-    //           <textarea class="form-control" rows="5" id="html"></textarea>
-    //         </div>
-    //         <div class="checkbox">
-    //           <label><input type="checkbox" value="">special</label>
-    //         </div>
-    //         <input type="submit" class="btn btn-default">Submit</button>
-    //       </form>';
-
           echo '<form action="assets/php/post.php" method="post">
                 <input type="hidden" name="newcontent" value=1>
                 Name: <input type="text" name="name" class="form-control"><br>
